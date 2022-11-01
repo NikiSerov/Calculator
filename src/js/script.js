@@ -128,4 +128,4 @@ function clearGlobalVariables() {
 calcGrid.addEventListener("click", handleClick);
 equalBtn.addEventListener("click", equalClick);
 allClearBtn.addEventListener("click", allClear);
-clearBtn.addEventListener("click", clear)
+clearBtn.addEventListener("click", clear);
