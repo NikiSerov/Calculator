@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input,
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border: none;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    background: transparent;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.calculator-grid {
+    display: flex;
+    border: 10px solid black;
+    flex-direction: column;
+    gap: 20px;
+    width: 440px;
+    padding: 20px;
+    margin: 50px 50%;
+    transform: translateX(-50%);
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.output-div {
+    height: 80px;
+    width: 380px;
+    border: 5px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.output {
+    width: 370px;
+    height: 70px;
+    outline: none;
+    font-family: 'Bungee', cursive;
+    font-size: 40px;
+}
+
+.input-button {
+    font-family: 'Bungee', cursive;
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    line-height: 1;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+.input-button:hover {
+    outline: 2px solid rgb(255, 140, 0);
+    transition: 0.15s;
+}
+
+.input-button.double-width {
+    width: 180px;
+}
+
+.zero {
+    margin: 0 100px;
+}
+
+.equal {
+    background-color: rgb(255, 140, 0);
+}
+
+.input-button.equal:hover {
+    transform: scale(1.05);
+    outline: none;
+}
