@@ -88,7 +88,38 @@ body {
     background-color: rgb(255, 140, 0);
 }
 
+.multiply {
+    padding-top: 4px;
+}
+
 .input-button.equal:hover {
     transform: scale(1.05);
     outline: none;
+}
+
+.body-dark-mode {
+    background-color: black;
+}
+
+.dark-mode {
+    color: white;
+    border-color: white;
+}
+
+.dark-mode-button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    width: 160px;
+    height: 80px;
+    line-height: 1;
+    border: 5px solid;
+    border-radius: 5px;
+}
+
+.dark-mode-button:hover {
+    outline: 2px solid rgb(255, 140, 0);
+    transition: 0.15s;
 }

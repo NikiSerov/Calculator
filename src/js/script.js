@@ -3,6 +3,10 @@ const clearBtn = document.querySelector(".clear");
 const allClearBtn = document.querySelector(".allClear");
 const equalBtn = document.querySelector(".equal");
 const output = document.querySelector("#output");
+const darkModeBtn = document.querySelector(".dark-mode-button");
+const body = document.querySelector(".body");
+const inputBtnList = document.querySelectorAll(".input-button");
+const outputDiv = document.querySelector(".output-div");
 
 let num1 = '';
 let num2 = '';
@@ -125,7 +129,29 @@ function clearGlobalVariables() {
     op = '';
 }
 
+function darkTheme() {
+    body.classList.toggle("body-dark-mode");
+    calcGrid.classList.toggle("dark-mode");
+    outputDiv.classList.toggle("dark-mode");
+    output.classList.toggle("dark-mode");
+    darkModeBtn.classList.toggle("dark-mode");
+    
+    switch (darkModeBtn.textContent) {
+        case "darkmode":
+            darkModeBtn.textContent = "lightmode";
+            break;
+        case "lightmode":
+            darkModeBtn.textContent = "darkmode";
+            break;
+    }
+
+    for (let inputBtn of inputBtnList) {
+        inputBtn.classList.toggle("dark-mode");
+    }
+}
+
 calcGrid.addEventListener("click", handleClick);
 equalBtn.addEventListener("click", equalClick);
 allClearBtn.addEventListener("click", allClear);
 clearBtn.addEventListener("click", clear);
+darkModeBtn.addEventListener("click", darkTheme);
