@@ -127,11 +127,14 @@ function clearGlobalVariables() {
 }
 
 function darkTheme() {
+    const darkModeElements = [calcGrid, outputDiv, output, darkModeBtn];
+
+    for (let elem of darkModeElements) {
+        elem.classList.toggle("dark-mode");
+    }
+
     body.classList.toggle("body-dark-mode");
-    calcGrid.classList.toggle("dark-mode");
-    outputDiv.classList.toggle("dark-mode");
-    output.classList.toggle("dark-mode");
-    darkModeBtn.classList.toggle("dark-mode");
+
     
     switch (darkModeBtn.textContent) {
         case "darkmode":
