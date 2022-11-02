@@ -90,8 +90,6 @@ function clear() {
     if (num2 !== '') {
         num2 = num2.slice(0, -1);
     }
-
-    console.log(num1, num2, op);
 }
 
 function handleOperatorClick(target) {
@@ -113,7 +111,6 @@ function handleOperatorClick(target) {
 }
 
 function setGlobalVariables (symbol) {
-    console.log(symbol, 'huy');
     const parsed = parseInt(symbol);
 
         if (isNaN(parsed)) {
