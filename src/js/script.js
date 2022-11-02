@@ -127,27 +127,7 @@ function clearGlobalVariables() {
 }
 
 function darkTheme() {
-    const darkModeElements = [calcGrid, outputDiv, output, darkModeBtn];
-
-    for (let elem of darkModeElements) {
-        elem.classList.toggle("dark-mode");
-    }
-
-    body.classList.toggle("body-dark-mode");
-
-    
-    switch (darkModeBtn.textContent) {
-        case "darkmode":
-            darkModeBtn.textContent = "lightmode";
-            break;
-        case "lightmode":
-            darkModeBtn.textContent = "darkmode";
-            break;
-    }
-
-    for (let inputBtn of inputBtnList) {
-        inputBtn.classList.toggle("dark-mode");
-    }
+    body.classList.toggle("dark-mode");
 }
 
 calcGrid.addEventListener("click", handleClick);
