@@ -7,6 +7,7 @@ const darkModeBtn = document.querySelector(".dark-mode-button");
 const body = document.querySelector(".body");
 const inputBtnList = document.querySelectorAll(".input-button");
 const outputDiv = document.querySelector(".output-div");
+const darkThemeKey = 'calculatorHasDarkMode';
 
 let num1 = '';
 let num2 = '';
@@ -126,7 +127,17 @@ function clearGlobalVariables() {
     op = '';
 }
 
-function darkTheme() {
+function toggleTheme() {
+    body.classList.toggle("dark-mode");
+    
+    if (localStorage.getItem(darkThemeKey)) {
+        localStorage.removeItem(darkThemeKey);
+    } else {
+        localStorage.setItem(darkThemeKey, true);
+    }
+}
+
+if (localStorage.getItem(darkThemeKey)) {
     body.classList.toggle("dark-mode");
 }
 
@@ -134,4 +145,4 @@ calcGrid.addEventListener("click", handleClick);
 equalBtn.addEventListener("click", equalClick);
 allClearBtn.addEventListener("click", allClear);
 clearBtn.addEventListener("click", clear);
-darkModeBtn.addEventListener("click", darkTheme);
+darkModeBtn.addEventListener("click", toggleTheme);
